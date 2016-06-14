@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SignalR_Server.SignalRHub;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,6 +16,7 @@ namespace SignalR_Server.Controllers
 
         public ActionResult About()
         {
+            HubContext.DownloadContent();
             ViewBag.Message = "Your application description page.";
 
             return View();
